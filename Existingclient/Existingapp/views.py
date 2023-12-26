@@ -28,15 +28,4 @@ def login_user(request):
         return Response({"message": "Login successful"}, status=status.HTTP_200_OK)
     else:
         return Response({"message": "Invalid username or password"}, status=status.HTTP_401_UNAUTHORIZED)
-    
-
-class TattooServiceView(TemplateView):
-    template_name = 'tattoo_service.html'
-
-class TattooHeadView(TemplateView):
-    template_name = 'tattoo_head.html'
-
-class TattooNeckView(TemplateView):
-    template_name = 'tattoo_neck.html'
-
 
